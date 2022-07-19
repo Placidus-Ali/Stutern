@@ -16,9 +16,9 @@ def test_exist():
 
 #--------------------------------------------------
 def test_runnable():
-   """Run using python3"""
+   """Run using python"""
 
-   out = getoutput(f' python3 {prg}')
+   out = getoutput(f' python {prg}')
    assert out.strip() == 'Hello, World!'
 
 
