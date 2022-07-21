@@ -1,4 +1,3 @@
 #!/usr/bin/env python
 #say hello
-greeting = "Hello, World!"
-print(greeting)
+print("Hello World!")
