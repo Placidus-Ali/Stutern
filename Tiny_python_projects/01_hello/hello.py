@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+#say hello
+print('Hhello, world!')
+
 
 import argparse
 from email import parser
@@ -13,7 +16,7 @@ def get_args():
         description= 'Say Hello'
         formatter_class= argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('--n', 
+    parser.add_argument('-n', 
                         '--name',
                         help='Name to greet',
                         metavar='name',
@@ -30,4 +33,4 @@ def main():
 
 if __name__ == '__main__' :
     main()
-    
+
