@@ -1,12 +1,10 @@
 #!/user/bin/env python
 """test for hello.py"""
 
-from ast import Assert
-from optparse import Option
 import os
 from subprocess import getstatusoutput, getoutput
 
-prg = 'hello.py'
+prg = '.\hello.py'
 
 
 #-------------------------------------------------
@@ -19,17 +17,20 @@ def test_exist():
 def test_runnable():
    """Run using python3"""
 
-   out = getoutput(f' python3 {prg}')
+   out = getoutput(f'python {prg}')
    assert out.strip()  == "Hello, World!"
 
 
 #----------------------------------------------------
+# def test_executable():
+#         """Says 'Hello, World' by default"""
+
+#     out = getoutput(prg)
+#     assert out.strip() == "Hello, World!"
+
 def test_executable():
-    """Says 'Hello, World' by default"""
-
     out = getoutput(prg)
-    assert out.strip() == 'Hello, World!'
-
+    assert out.strip() == "Hello, World!" 
 
 #------------------------------------------------------
 def test_usage():
