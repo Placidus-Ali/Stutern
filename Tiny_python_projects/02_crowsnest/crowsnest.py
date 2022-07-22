@@ -23,12 +23,9 @@ def main():
     """Make a jazz noise here"""
 
     args = get_args()
-    print(args.word)
-    
-    # word = args.word
+    word = args.word
     # article = 'an' if word[0].lower() in 'aeiou' else 'a'
-
-    # print(f'Ahoy, Captain, {article} {word} off the larboard bow!')
+    print('Ahoy, Captain, a " + args.word + " off the larboard bowl!')
 
 
 # --------------------------------------------------
