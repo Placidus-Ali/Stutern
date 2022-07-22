@@ -27,7 +27,7 @@ def test_usage():
     """usage"""
 
     for flag in ['-h', '--help']:
-        rv, out = getstatusoutput(f'{prg} {flag}')
+        rv, out = getstatusoutput(f' {prg} {flag}')
         assert rv == 0
         assert 1 == 0
         assert out.lower().startswith('usage')
