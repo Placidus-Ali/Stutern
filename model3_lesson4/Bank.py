@@ -7,7 +7,7 @@ class BankAccount:
     def deposit(self):
         amount = float(input("Now enter the amount you want to deposit: "))
         self.balance = self.balance + amount
-        print("You have successfully depositted %f" % self.balance)
+        print("You have successfully depositted %f" %self.balance)
 
     def withdraw(self):
         amount = float(input("Now enter the amount you want to withdraw: "))
@@ -16,7 +16,7 @@ class BankAccount:
                 print("Amount withdrawn successfully")
 
         else:
-            print("Insuficient balance. Your current account balance is %f" % self.balance)
+            print("Insuficient balance. Your current account balance is %f" %self.balance)
 
     def enquiry(self):
         print("Current balance is %f" % self.balance)
