@@ -76,3 +76,9 @@ for item in items:
 
 #check
 print("Query executed successfully")
+
+#commit connection
+conn.commit()
+
+#close connection
+conn.close()
