@@ -19,20 +19,21 @@ Cursor = conn.cursor()
 print("Cursor object created successfully!")
 
 # #create a table called Data_Science with 4 columns
-Cursor.execute("""
-                CREATE TABLE Data_Science (
-                    firt_name text,
-                    last_name text,
-                    email text,
-                    course text
-                ) 
-""")
+# Cursor.execute("""
+#                 CREATE TABLE Data_Science (
+#                     firt_name text,
+#                     last_name text,
+#                     email text,
+#                     course text
+#                 ) 
+# """)
 
-# check that table is created successfully
+#check that table is created successfully
 print("Table created successfully!")
 
 #create a row to input into the table called Data_Science
-coursemate_list = [  ('Abubakar', 'Adisa', 'adisaabubakar@gmail.com', 'Data Science'), ('Adebisi', 'Afolabi', 'wasola.afolabi@yahoo.com', 'Data Science'), 
+coursemate_list = [  
+                     ('Abubakar', 'Adisa', 'adisaabubakar@gmail.com', 'Data Science'), ('Adebisi', 'Afolabi', 'wasola.afolabi@yahoo.com', 'Data Science'), 
                      ('Adedoyin', 'Abass', 'doyinabass0@gmail.com', 'Data Science'), ('Awonaike', 'Tawakalitu', 'purpleduralumin@gmail.com', 'Data Science'), 
                      ('Babajide', 'Adesugba' 'jide_ade@hotmail.com', 'Data Science'), ('Bukola', 'Ajayi', 'bukolam.ajayi@gmail.com', 'Data Science'), 
                      ('Binta', 'Umar', 'ubinta63@yahoo.com', 'Data Science'), ('Christian', 'Uzondu', 'uzonduchristian2@gmail.com', 'Data Science'),
@@ -52,5 +53,11 @@ coursemate_list = [  ('Abubakar', 'Adisa', 'adisaabubakar@gmail.com', 'Data Scie
                      ('Tina', 'Uyateide', 'tinauyats@gmail.com', 'Data Science'), ('Victoria', 'Chukwuno', 'Chukwunovictoria@gmail.com', 'Data Science')
                      ]
 
-#insert the multiply rows into the Data_Science table
-Cursor.executemany("INSERT INTO Data_Science VALUES(?, ?, ?, ?,)", coursemate_list)
+#check
+print("coursemates list create successfully")
+
+#insert into info into the table
+Cursor.executemany("""INSERT INTO Data_Science VALUES ( ?, ?, ?, ?)""", coursemate_list)
+
+#check
+print("Multpile info inserted successfully")
