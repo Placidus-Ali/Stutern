@@ -73,19 +73,7 @@ print("celebrity info inserted successfully")
 #commit connection
 conn.commit()
 
-# Who is the most decorated celebrity?
-cursor.execute(
-    """
-    SELECT
-        MAX(award)
-    FROM
-    celebrity;
-    """
-)
-items = cursor.fetchall()
+#close connection
+conn.close()
 
-# Loop through the items
-for item in items:
-    name, genre, num_albums, age, award, years_in_industry = items
-    print("Select MAX(award) from celebrity_info")
 
