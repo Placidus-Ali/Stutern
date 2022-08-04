@@ -99,3 +99,7 @@ print("First Name"+ "\t Last Name"+ "\t\t E-mail"+ "\t\t\t\t Course"+ "\t\t Leve
 for item in items:
     first_name, last_name, email, course, level = item
     print(f"{first_name:16}{last_name:20}{email:32}{course:20}{level:18}")
+
+conn.commit()
+
+conn.close()
