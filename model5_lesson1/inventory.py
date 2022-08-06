@@ -80,3 +80,8 @@ print("Item Name"+ "\t Item ID"+ "\t Cost Price"+ "\t Quantity In Stock \n" f"{'
 for item in items:
     item_name, item_id, cost_price, quantity_in_stock = item
     print(f"{item_name:12}{item_id:10}{cost_price:16}{quantity_in_stock:15}")
+
+
+conn.commit()
+
+conn.close()
