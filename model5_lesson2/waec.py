@@ -1,52 +1,63 @@
 import sqlite3
 import csv
 
-#check
-print("Sqlite3 and csv imported")
-
-#create connection
+#create a connection
 conn = sqlite3.connect("waec_result.db")
 
 #check 
-print("connection created successfully")
+print("Connection created")
 
 #create a cursor object
 cursor = conn.cursor()
 
 #check
-print("Cursor object created")
+print('Cursor object created')
 
-# #create a table called waec_data
-table =  """CREATE TABLE waec_data(
-        Name TEXT,
-        English INTEGER,
-        Maths INTEGER,
-        Biology INTEGER,
-        Chemistry INTEGER,
-        Physics INTEGER,
-        Agric INTEGER,
-        Igbo INTEGER,
-        Geography INTEGER,
-        CRS INTEGER
-            
-    )
-    """
+# #create a table called waec_result
+# create_table = """
+# CREATE TABLE waec_result(
+#         Name TEXT,
+#         English INTEGER,
+#         Maths INTEGER,
+#         Biology INTEGER,
+#         Chemistry INTEGER,
+#         Physics INTEGER,
+#         Agric INTEGER,
+#         Igbo INTEGER,
+#         Geography INTEGER,
+#         CRS INTEGER
+#     )
+#    """
 
-#check
-print("Table created successfully")
+# #check
+# print("Table created")
 
-conn.commit()
+# conn.commit()
 
-cursor.execute(table)
 
-# To read my csv file
-with open('waec_result.csv') as opened_file:
-    read_file = csv.reader(opened_file)
-    
-    #This command is used to skip header of a file
-    next(opened_file)
+# cursor.execute(create_table)
 
-    cursor.executemany(""" INSERT INTO waec_data VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""", read_file)
+# #check
+# print("Cursor Executed successfully")
 
-#check
-print("Executed")
+
+# #load existing table
+# with open('waec_result.csv', 'r') as opened_file:
+#     read_file = csv.reader(opened_file)
+
+#     #This command is used to skip header
+#     next(opened_file)
+
+#     cursor.executemany(
+#         """INSERT INTO waec_result
+#          VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+#          """, 
+#          read_file)
+
+# #check
+# print("data loaded into the table successfully")
+
+# conn.commit()
+
+# conn.close()
+
