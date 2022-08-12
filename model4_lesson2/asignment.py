@@ -17,14 +17,14 @@ cursor = conn.cursor()
 print("cursor object created successfully!")
 
 # #create a table called learners with 4 columns
-# cursor.execute("""
-#                 CREATE TABLE learners (
-#                     firt_name text,
-#                     last_name text,
-#                     email text,
-#                     course text
-#                 ) 
-# """)
+cursor.execute("""
+                CREATE TABLE learners (
+                    firt_name text,
+                    last_name text,
+                    email text,
+                    course text
+                ) 
+""")
 
 #check that table is created successfully
 print("Table created successfully!")
