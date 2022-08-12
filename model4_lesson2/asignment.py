@@ -66,12 +66,12 @@ cursor.execute(
 items = cursor.fetchall()
 
 # format output to display in a tabular form
-print("First_name"+ "\t Last_name"+ "\t\t Email:"+ "\t\t\t\t Course \n" f"{'.' * 100}" )
+print("First_name"+ "\t Last_name"+ "\t\t Email:"+ "\t\t\t\tCourse \n" f"{'.' * 100}" )
 
 # Loop through the items
 for item in items:
     first_name, last_name, email, course = item
-    print(f"{first_name:16}{last_name:16}{email:35}{course}")
+    print(f"{first_name:16}{last_name:16}{email:35}{course:25}")
 
 
 #check

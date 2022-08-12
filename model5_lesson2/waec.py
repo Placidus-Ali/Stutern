@@ -42,22 +42,22 @@ print('Cursor object created')
 
 
 # #load existing table
-# with open('waec_result.csv', 'r') as opened_file:
-#     read_file = csv.reader(opened_file)
+with open('waecresult.csv', 'r') as file:
+    read_file = csv.reader(file)
 
-#     #This command is used to skip header
-#     next(opened_file)
+    #This command is used to skip header
+    next(file)
 
-#     cursor.executemany(
-#         """INSERT INTO waec_result
-#          VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-#          """, 
-#          read_file)
+    cursor.executemany(
+        """INSERT INTO waec_result
+         VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+         """, 
+         read_file)
 
-# #check
-# print("data loaded into the table successfully")
+#check
+print("data loaded into the table successfully")
 
-# conn.commit()
+conn.commit()
 
-# conn.close()
+conn.close()
 
