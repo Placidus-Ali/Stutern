@@ -14,31 +14,31 @@ cursor = conn.cursor()
 print('Cursor object created')
 
 # #create a table called waec_result
-# create_table = """
-# CREATE TABLE waec_result(
-#         Name TEXT,
-#         English INTEGER,
-#         Maths INTEGER,
-#         Biology INTEGER,
-#         Chemistry INTEGER,
-#         Physics INTEGER,
-#         Agric INTEGER,
-#         Igbo INTEGER,
-#         Geography INTEGER,
-#         CRS INTEGER
-#     )
-#    """
+create_table = """
+CREATE TABLE waec_result(
+        Name TEXT,
+        English INTEGER,
+        Maths INTEGER,
+        Biology INTEGER,
+        Chemistry INTEGER,
+        Physics INTEGER,
+        Agric INTEGER,
+        Igbo INTEGER,
+        Geography INTEGER,
+        CRS INTEGER
+    )
+   """
 
-# #check
-# print("Table created")
+#check
+print("Table created")
 
-# conn.commit()
+conn.commit()
 
 
-# cursor.execute(create_table)
+cursor.execute(create_table)
 
-# #check
-# print("Cursor Executed successfully")
+#check
+print("Cursor Executed successfully")
 
 
 # #load existing table
