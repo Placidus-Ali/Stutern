@@ -10,13 +10,5 @@ even_numbers = my_array[1:100:2]
 print(even_numbers)
 
 # find the LCM of the even numbers
-lcm = np.lcm.reduce(my_array[1:100:2])
+lcm = np.lcm.reduce(even_numbers)
 print(lcm)
-
-# array = np.arange(1,11)
-# print(array)
-# even = array[1:10:2]
-# print(even)
-
-# lcm = np.lcm.reduce(even)
-# print(lcm)
