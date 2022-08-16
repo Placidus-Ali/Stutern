@@ -42,10 +42,10 @@ coursemate_info = [
             ('Binta', 'Umar', 'ubinta63@yahoo.com', 'Data Science', 'Beginner'), ('Christian', 'Uzondu', 'uzonduchristian2@gmail.com', 'Data Science', 'Beginner'),
             ('Cynthia', 'Awiya', 'awiyac@yahoo.com', 'Data Science', 'Beginner'), ('Deborah', 'Olorunnishola', 'deboraholuwatobi247@gmail.com', 'Data Science', 'Beginner'),
             ('Eke', 'Ihuoma', 'ihuomaeke28@gmail.com', 'Data Science', 'Beginner'), ('Esther', 'Akpanowo', 'estherakpanowo@gmail.com', 'Data Science', 	'Beginner'),
-            (), (),
-            (), (),
-            (), (),
-            (), (),
+            ('Eniola', 'Osadare', 'dorcasosadare@gmail.com', 'Data Science', 'Beginner'), ('Etariemi', 'Louis', 'etariemilouis@gmail.com', 'Data Science', 'Beginner'),
+            ('Faith', 'Amure', 'amuretalodabif@gmail.com', 'Data Science', 'Beginner'), ('Ganiyat', 'Shittu', 'ganiyatas@gmail.com', 'Data Science', 'Beginner'),
+            ('Gideon', 'Uko', 'ukogideon13@gmail.com', 'Data Science', 'Beginner'), ('Idowu', 'Adesanya', 'idsworld22@yahoo.com', 'Data Science', 'Beginner'),
+            ('Joyce', 'Ezeonwu', 'joyceokore@gmail.com', 'Data Science', 'Beginner'), ('Kehinde', 'Orolade', 'kehindeorolade@gmail.com', 'Data Science', 'Beginner'),
 
 
                     
