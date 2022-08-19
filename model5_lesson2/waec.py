@@ -16,16 +16,16 @@ print('Cursor object created')
 # #create a table called waec_result
 create_table = """
 CREATE TABLE waec_result(
-        Name TEXT,
-        English INTEGER,
-        Maths INTEGER,
-        Biology INTEGER,
-        Chemistry INTEGER,
-        Physics INTEGER,
-        Agric INTEGER,
-        Igbo INTEGER,
-        Geography INTEGER,
-        CRS INTEGER
+        name TEXT,
+        english INTEGER,
+        maths INTEGER,
+        biology INTEGER,
+        chemistry INTEGER,
+        physics INTEGER,
+        agric INTEGER,
+        igbo INTEGER,
+        geography INTEGER,
+        crs INTEGER
     )
    """
 
