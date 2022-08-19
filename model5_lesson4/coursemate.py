@@ -1,56 +1,14 @@
-import sqlite3
-import csv
+import pandas as pd
+import sqlalchemy
+from sqlalchemy import create_engine
+
+
+# Loading my csv file into my table
+coursemates_info = pd.read_csv("coursemate.csv")
 
 #check
-print("Sqlite3 and csv imported")
+print("Info loaded successfully")
 
-import csv
+#create engine connection
+engine = create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/coursemate.db")
 
-#create a connection
-conn = sqlite3.connect("coursemate.db")
-
-#check 
-print("Connection created")
-
-#create a cursor object
-cursor = conn.cursor()
-
-#check
-print('Cursor object created')
-
-# #create a table called coursemate
-cursor.execute( """
-CREATE TABLE coursemate(
-        first_name TEXT,
-        last_name TEXT,
-        email TEXT,
-        course TEXT,
-        level TEXT
-    )
-   """)
-
-#check
-print("Table created")
-
-conn.commit()
-
-#insert values into your table
-coursemate_info = [
-            ('Abubakar', 'Adisa', 'adisaabubakar@gmail.com', 'Data Science', 'Beginner'), ('Adebisi', 'Afolabi', 'wasola.afolabi@yahoo.com', 'Data Science', 'Beginner'),
-            ('Adedoyin', 'Abass', 'doyinabass0@gmail.com', 'Data Science', 'Beginner'), ('Awonaike', 'Tawakalitu', 'purpleduralumin@gmail.com' 'Data Science', 'Beginner'),
-            ('Babajide', 'Adesugba', 'jide_ade@hotmail.com', 'Data Science', 'Beginner'), ('Bukola', 'Ajayi', 'bukolam.ajayi@gmail.com', 'Data Science', 'Beginner'),
-            ('Binta', 'Umar', 'ubinta63@yahoo.com', 'Data Science', 'Beginner'), ('Christian', 'Uzondu', 'uzonduchristian2@gmail.com', 'Data Science', 'Beginner'),
-            ('Cynthia', 'Awiya', 'awiyac@yahoo.com', 'Data Science', 'Beginner'), ('Deborah', 'Olorunnishola', 'deboraholuwatobi247@gmail.com', 'Data Science', 'Beginner'),
-            ('Eke', 'Ihuoma', 'ihuomaeke28@gmail.com', 'Data Science', 'Beginner'), ('Esther', 'Akpanowo', 'estherakpanowo@gmail.com', 'Data Science', 	'Beginner'),
-            ('Eniola', 'Osadare', 'dorcasosadare@gmail.com', 'Data Science', 'Beginner'), ('Etariemi', 'Louis', 'etariemilouis@gmail.com', 'Data Science', 'Beginner'),
-            ('Faith', 'Amure', 'amuretalodabif@gmail.com', 'Data Science', 'Beginner'), ('Ganiyat', 'Shittu', 'ganiyatas@gmail.com', 'Data Science', 'Beginner'),
-            ('Gideon', 'Uko', 'ukogideon13@gmail.com', 'Data Science', 'Beginner'), ('Idowu', 'Adesanya', 'idsworld22@yahoo.com', 'Data Science', 'Beginner'),
-            ('Joyce', 'Ezeonwu', 'joyceokore@gmail.com', 'Data Science', 'Beginner'), ('Kehinde', 'Orolade', 'kehindeorolade@gmail.com', 'Data Science', 'Beginner'),
-
-
-                    
-                ]       
-conn.commit()
-
-#check
-print("List created successfully")
